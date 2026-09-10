@@ -121,3 +121,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'
 ]
+
+
+# Говорим Django доверять HTTPS-заголовку от системного Nginx
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Добавляем домен в список доверенных источников для CSRF
+CSRF_TRUSTED_ORIGINS = [
+    'https://taskidocker81.duckdns.org',
+]
