@@ -46,7 +46,7 @@ services:
     # перенаправление всех запросов с порта 8000 хоста
     # на порт 80 контейнера
     ports:
-      - 8000:80
+      - 8085:80
     depends_on:
       backend:
         condition: service_started

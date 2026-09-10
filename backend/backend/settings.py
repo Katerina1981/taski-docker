@@ -123,10 +123,12 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 
+ALLOWED_HOSTS = ['*']
+
+CSRF_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = ['https://taskidocker81.duckdns.org', 'http://duckdns.org']
 # Говорим Django доверять HTTPS-заголовку от системного Nginx
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Добавляем домен в список доверенных источников для CSRF
-CSRF_TRUSTED_ORIGINS = [
-    'https://taskidocker81.duckdns.org',
-]
+
